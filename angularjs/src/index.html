@@ -12,14 +12,30 @@
 </head>
 <body>
 
-	<div class="mainContainer" data-ng-app="">
-		<h1>Features</h1>
-		<h2>{{data.label}}</h2>
-		<input type="text"  data-ng-model="data.label">
-        <input type="text"  data-ng-model="data.class">
-		<button class="btn {{data.class}}">{{data.label}}</button>
-		
-	</div>
+	<div class="mainContainer" data-ng-app="MyApp">
+
+
+        <div restrictions> Restrictions </div>
+
+        <elementrest> Elements </elementrest>
+
+        <div class="classrest"> Class Restrictions </div>
+
+        <!--  directive: commentrest  -->
+
+        <walterwhite message="I am Lucas" class="btn btn-success"></walterwhite>
+
+        <div interactive-btn class="btn btn-default">
+            Button
+        </div>
+
+        <theshield reigns rollins ambrose class="btn btn-default">Access de shield</theshield>
+
+        <theshield reigns class="btn btn-default">Click in Reigns</theshield>
+        <theshield rollins class="btn btn-default">Click in Rollins</theshield>
+        <theshield ambrose class="btn btn-default">Click in Ambrose</theshield>
+
+    </div>
 
 </body>
 </html>
