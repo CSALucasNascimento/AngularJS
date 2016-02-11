@@ -1,5 +1,41 @@
 var app = angular.module("MyApp", []);
 
+app.directive('restrictions', function () {
+    return {
+        restrict: 'A',
+        link: function(){
+            console.log("I am an attribute");
+        }
+    }
+});
+
+app.directive('elementrest', function () {
+    return {
+        restrict: 'E',
+        link: function(){
+            console.log("I am an element");
+        }
+    }
+});
+
+app.directive('classrest', function () {
+    return {
+        restrict: 'C',
+        link: function(){
+            console.log("I am a class restriction");
+        }
+    }
+});
+
+app.directive('commentrest', function () {
+    return {
+        restrict: 'M',
+        link: function(){
+            console.log("I am a comment restriction");
+        }
+    }
+});
+
 app.controller ('ShieldCtrl', function($scope){
 
     $scope.shieldNames = [];
